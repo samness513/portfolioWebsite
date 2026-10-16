@@ -30,6 +30,7 @@
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
+        <li><a href="#coursework">Coursework</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -52,7 +53,7 @@
 
         <p>
             Aerospace Engineering student at Iowa State University with a minor in
-            Non-Destructive Evaluation, interested in design, fabrication, and testing.
+            Non-Destructive Evaluation, interested in Aerospace design, fabrication, and testing.
         </p>
 
         <div class="hero-buttons">
@@ -73,17 +74,15 @@
           <p>
             I'm an Aerospace Engineering student at Iowa State University, graduating in December 2027
             with a minor in Non-Destructive Evaluation. I currently serve as Project Manager for CySat,
-            Iowa State's CubeSat engineering team, where we are building a prototype satellite to take
-            high-altitude infrared images for forest fire detection.
+            Iowa State's CubeSat engineering team, where we are beginning the development of our next satellite, CySat-2.
           </p>
           <p>
-            I enjoy hands-on engineering work: designing parts in SolidWorks, fabricating them with
-            3D printing and machining, and assembling and testing real systems. I'm especially interested
-            in roles where I can combine engineering design with building, testing, and leading teams.
+            I enjoy hands-on engineering work: designing parts in SolidWorks, prototyping structures, and testing electrical systems. I'm especially interested
+            in roles where I can combine engineering design with building, testing, and working on a team.
           </p>
           <figure class="about-photo">
             <img src="assets/nasa-visit.jpg" alt="Samuel Ness presenting to the NASA Administrator in an Iowa State University engineering lab" loading="lazy" />
-            <figcaption>Presenting our work to the NASA Administrator during a visit to Iowa State University.</figcaption>
+            <figcaption>Presenting about CySat's work to NASA Administrator Jared Isaacman during a visit to Iowa State University.</figcaption>
           </figure>
         </div>
       </div>
@@ -105,7 +104,7 @@
               <li>MATLAB</li>
               <li>KiCAD</li>
               <li>Finite Element Analysis</li>
-              <li>PrusaSlicer</li>
+              <li>Assorted Slicing Software</li>
             </ul>
             <p>See my projects for more detail.</p>
           </div>
@@ -127,7 +126,7 @@
               <li>Standard Operating Procedures</li>
               <li>Technical Presentations</li>
               <li>Client Communication</li>
-              <li>Event Planning</li>
+              <li>Technical Report Writing</li>
             </ul>
           </div>
           <div class="skill-card">
@@ -154,22 +153,36 @@
           <div class="projects-grid">
           <article class="project-card">
             <div class="project-topline">
-              <span class="tag">Systems Engineering</span>
-              <span class="tag">SolidWorks</span>
+              <span class="tag">Aerospace Engineering</span>
+              <span class="tag">3D Modeling and Structural Simulation</span>
               <span class="tag">Project Management</span>
             </div>
             <h3>CySat CubeSat Prototype</h3>
             <p>
-              Project Manager for Iowa State University's CySat CubeSat engineering team, building a prototype
-              Cube-Satellite to take high-altitude infrared pictures for forest fire detection.
+              I am the project manager for CySat, Iowa State University's Cube-Satellite program. I have been
+              involved in every phase of the design process of a CubeSat prototype, from initial design through launch.
             </p>
-            <ul>
-              <li>Designed and tested structural components on the exterior of the prototype</li>
-              <li>Used SolidWorks to design and fabricate 4 integrated parts for use on the satellite</li>
-              <li>Worked within NASA guidelines and created the team's Standard Operating Procedure</li>
-              <li>Create plans and delegate tasks for members of sub-teams</li>
-              <li>Present the project to a board of faculty and potential clients</li>
-            </ul>
+            <!-- Extra text stays collapsed until "Show more" is clicked (see script.js) -->
+            <div class="more-text" id="cysatMore" aria-hidden="true">
+              <div>
+            <p>
+              I joined CySat in the fall of 2025 as a systems and integration team member. I designed parts of the
+              structure in SolidWorks and fabricated them using 3D printers. I also soldered several of the PCBs
+              inside the satellite and created camera mounts.
+            </p>
+            <p>
+              In the spring of 2026 I became the Operations Team Lead. In that role I designed and soldered PCBs
+              for use within the prototype, created the team's Standard Operating Procedure, and led 5 other students.
+            </p>
+            <p>
+              This past summer I traveled to the NASA Columbia Scientific Balloon Facility in Texas to integrate our
+              CubeSat prototype for launch on a high-altitude balloon. After the successful prototype test flight, we
+              started work on CySat-2, planned for launch in 2028. As project manager this semester, I have presented
+              CySat to a NASA delegation including Administrator Isaacman and created the requirements for CySat-2.
+            </p>
+              </div>
+            </div>
+            <button class="show-more" type="button" aria-expanded="false" aria-controls="cysatMore">Show more</button>
             <a class="project-link" href="#">Add project link →</a>
           </article>
 
@@ -186,11 +199,61 @@
             </p>
             <ul>
               <li>Fabricated complex parts for 7 engineering teams using Prusa 3D printers</li>
-              <li>Prepared and optimized models for printing with PrusaSlicer software</li>
-              <li>Help students safely use power tools, 3D printers, and the clean-room</li>
+              <li>Prepared and optimized models for printing with PrusaSlicer and BambuSlicer software</li>
+              <li>Help students safely use power tools, Solder stations, 3D printers, and the clean-room</li>
             </ul>
             <a class="project-link" href="#">Add project link →</a>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Coursework Section -->
+    <!-- To add a course, copy a <li>...</li> line and change the text. -->
+    <!-- To remove a whole category, delete its <div class="skill-card"> ... </div> block. -->
+    <section id="coursework" class="section">
+      <div class="container">
+        <p class="section-label">Coursework</p>
+        <h2>Relevant coursework at Iowa State University:</h2>
+
+        <div class="skills-grid">
+          <div class="skill-card">
+            <h3>Structures & Materials/Non-Destructive Evaluation</h3>
+            <ul>
+              <li>Flight Structures Analysis and Laboratory</li>
+              <li>Mechanics of Materials</li>
+              <li>Materials Science & Engineering</li>
+              <li>Dynamics</li>
+              <li>Statics</li>
+              
+            </ul>
+          </div>
+          <div class="skill-card">
+            <h3>Fluids & Aerodynamics</h3>
+            <ul>
+              <li>Incompressible/Compressible flow Aerodynamics</li>
+              <li>Aerodynamics Propulsion Laboratory</li>
+              <li>Thermodynamics</li>
+              
+            </ul>
+          </div>
+          <div class="skill-card">
+            <h3>Systems Engineering</h3>
+            <ul>
+              <li>AstroDynamics</li>
+              <li>Flight Dynamics & Controls</li>
+              
+              
+            </ul>
+          </div>
+          <div class="skill-card">
+            <h3>Math & Programming</h3>
+            <ul>
+              <li>Computational Techniques for Aerospace Design</li>
+              <li>Differential Equations</li>
+              <li>Calculus 1-3</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
@@ -228,23 +291,7 @@
             </div>
           </div>
 
-          <div class="timeline-item">
-            <div class="timeline-date">August 2025 - Present with the Iowa State University CySat CubeSat Engineering Team</div>
-            <div class="timeline-content">
-              <h3>Project Manager</h3>
-              <p>Project Manager (May 2026 - Present), Operations Team Lead (January - May 2026), Systems and Integration Team Member (August - December 2025)</p>
-              <p>
-                Responsibilities:
-                <ul>
-                  <li>Create prototype Cube-Satellite to take high-altitude infrared pictures for forest fire detection</li>
-                  <li>Design and test structural components on the exterior of the prototype</li>
-                  <li>Work within NASA guidelines and created the Standard Operating Procedure</li>
-                  <li>Create plans and delegate tasks for members of sub-teams</li>
-                  <li>Present project to board of faculty and potential clients</li>
-                </ul>
-              </p>
-            </div>
-          </div>
+          
 
           <div class="timeline-item">
             <div class="timeline-date">August 2025 - Present at Iowa State University, Ames, IA</div>

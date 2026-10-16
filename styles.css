@@ -310,6 +310,7 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 1.5rem;
+    align-items: start; /* expanding one card doesn't stretch its neighbors */
 }
 
 .project-card {
@@ -410,6 +411,45 @@ body {
         rgba(56, 189, 248, 0.26),
         rgba(14, 165, 233, 0.12)
     );
+}
+
+/* Collapsible "Show more" text in project cards */
+.more-text {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.35s ease;
+}
+
+.more-text > div {
+    overflow: hidden;
+}
+
+.more-text.open {
+    grid-template-rows: 1fr;
+}
+
+.show-more {
+    display: block;
+    margin-bottom: 1rem;
+    padding: 0;
+    background: none;
+    border: none;
+    color: var(--accent);
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.show-more::after {
+    content: " ▾";
+}
+
+.show-more[aria-expanded="true"]::after {
+    content: " ▴";
+}
+
+.show-more:hover {
+    text-decoration: underline;
 }
 
 .project-link {

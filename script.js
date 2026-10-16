@@ -15,6 +15,18 @@ navLinks.querySelectorAll("a").forEach((link) => {
 
 
 
+// "Show more" buttons expand the extra text in project cards
+document.querySelectorAll(".show-more").forEach((button) => {
+  const moreText = document.getElementById(button.getAttribute("aria-controls"));
+
+  button.addEventListener("click", () => {
+    const isOpen = moreText.classList.toggle("open");
+    moreText.setAttribute("aria-hidden", String(!isOpen));
+    button.setAttribute("aria-expanded", String(isOpen));
+    button.textContent = isOpen ? "Show less" : "Show more";
+  });
+});
+
 // Automatically update footer year
 const yearElement = document.getElementById("year");
 yearElement.textContent = new Date().getFullYear();
